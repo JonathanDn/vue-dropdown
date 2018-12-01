@@ -1,0 +1,66 @@
+@import '../../shared/common';
+// * * binded style variables * *
+// --options-height --> dynamic options menu height
+// --option-height --> dynamic single option item height
+// --dropdown-width --> dynamic dropdown & options drawer width
+.dropdown {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: var(--dropdown-width);
+	height: var(--option-height);
+	padding: 0 5px;
+	position: relative;
+	border: 1px solid $card-border;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+	background: $btn-bg;
+	user-select: none;
+	.text {}
+	i {
+		margin-left: 5px;
+	}
+	.options {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: var(--dropdown-width);
+		height: var(--options-height);
+		margin-bottom: calc( -1 * var(--options-height) - 3px);
+		position: absolute;
+		left: -1px;
+		bottom: 0;
+		z-index: 1;
+		background: $btn-bg;
+		border-radius: $default-border-radius;
+		border: 1px solid $card-border;
+		.option {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding: 0 5px;
+			height: 35px;
+		}
+		.option:hover {
+			color: $default-text-hover-color;
+			background: $default-hover-color;
+			transition: all 0.7s;
+		}
+		.option:last-child {
+			border-radius: 0 0 4px 4px;
+		}
+	}
+}
+.dropdown:hover {
+	background: $default-hover-color;
+	transition: 0.7s all;
+	.text, i {
+		color: $default-text-hover-color;
+	}
+}
+
+// Smartphones - Landscape + Portrait
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
