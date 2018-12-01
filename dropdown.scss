@@ -1,8 +1,14 @@
-@import '../../shared/common';
 // * * binded style variables * *
 // --options-height --> dynamic options menu height
 // --option-height --> dynamic single option item height
 // --dropdown-width --> dynamic dropdown & options drawer width
+
+$border-bg: #232b35;
+$background-bg: #4a5b70;	
+$default-border-radius: 4px;	
+$default-hover-color: #0084d4;
+$default-text-hover-color: #000;
+
 .dropdown {
 	display: flex;
 	align-items: center;
@@ -11,11 +17,11 @@
 	height: var(--option-height);
 	padding: 0 5px;
 	position: relative;
-	border: 1px solid $card-border;
+	border: 1px solid $border-bg;
 	border-radius: 4px;
 	cursor: pointer;
 	color: #fff;
-	background: $btn-bg;
+	background: $background-bg;
 	user-select: none;
 	.text {}
 	i {
@@ -32,9 +38,9 @@
 		left: -1px;
 		bottom: 0;
 		z-index: 1;
-		background: $btn-bg;
+		background: $background-bg;
 		border-radius: $default-border-radius;
-		border: 1px solid $card-border;
+		border: 1px solid $border-bg;
 		.option {
 			display: flex;
 			align-items: center;
