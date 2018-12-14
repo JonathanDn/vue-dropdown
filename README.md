@@ -8,7 +8,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 
 | property | Type  | Description |
 | --- | ---  | --- |
-| options | array | holds the inner options of the dropdown(shown when open) |
+| options | array | holds the inner selection options of the dropdown(shown when open) |
 | width | number | determines the width of the dropdown button & options drawer |
 | placeholder | string | The text shown on the dropdown button defaultly |
 | prefix | string | A text prefix that will be added before the placeholder text |
