@@ -4,7 +4,7 @@
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
 ## Properties
-```config``` is a configuration object ```config: {...}``` holding the dropdown api properties which are:
+```config: {...}``` is a configuration object holding the dropdown api properties which are:
 
 ## Basics
 
