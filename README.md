@@ -28,6 +28,24 @@ You can then use the following selector anywhere in your project:
 ```
 <vue-dropdown></vue-dropdown>
 ```
+Define your **config** options object e.g
+```
+data: function() {
+    return {
+        config: {
+            options: [{...}, {...}, {...}],
+            prefix: "The",
+            backgroundColor: "green"
+        }
+    }
+}
+```
+
+And bind it to the selector like so
+```
+<vue-dropdown :config="config"></vue-dropdown>
+
+```
 
 # Docs
 ```config: {...}``` is a configuration object holding the dropdown api properties which are:
