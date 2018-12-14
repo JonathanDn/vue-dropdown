@@ -12,7 +12,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 | --- | ---  | --- |
 | **options** | array | holds the inner selection options of the dropdown(shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
 | **width** | number | determines the width of the dropdown button & options drawer |
-| **placeholder* | string | The text shown on the dropdown button defaultly |
+| **placeholder** | string | The text shown on the dropdown button defaultly |
 | **prefix** | string | A text prefix that will be added before the placeholder text |
 
 ## Customized Styling
