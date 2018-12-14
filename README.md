@@ -28,7 +28,7 @@ You can then use the following selector anywhere in your project:
 ```
 <vue-dropdown></vue-dropdown>
 ```
-Define your **config** options object e.g
+Define your **config** options object in the component importing VueDropdown e.g
 ```
 data: function() {
     return {
