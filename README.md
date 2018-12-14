@@ -27,7 +27,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 ## Events
 | event name | returns | description | usage |
 | --- | ---  | --- | --- |
-| **setSelectedOption** | Clicked Option Object | Once a single dropdown option was clicked, it's option data object is emitted through this event upwards to the dropdown selector above | e.g ```<vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>``` |
+| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so | e.g ```<vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>``` |
 
 ## Install
 To install the component simply use the command ```npm i vue-dynamic-dropdown```
