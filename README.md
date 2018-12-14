@@ -27,7 +27,8 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 ## Events
 | event name | returns | description | usage |
 | --- | ---  | --- | --- |
-| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so | e.g ```
+| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so | e.g 
+```
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ``` |
 
