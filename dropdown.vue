@@ -2,11 +2,11 @@
 	<div class="dropdown" @click="toggleRiskLevels"
 	     :style="[{'--options-height': optionsHeight + 'px'},
 	            {'--option-height': optionHeight + 'px'},
-	            {'--dropdown-width': dropdownWidth + 'px'},
-	            {'--dropdown-background-color': dropdownBackgroundColor},
-	            {'--dropdown-border' : dropdownBorder},
-	            {'--dropdown-hover-background-color': dropdownHoverBackgroundColor},
-	            {'--dropdown-default-text-color': dropdownTextColor}]">
+	            {'--dropdown-width': width + 'px'},
+	            {'--dropdown-background-color': backgroundColor},
+	            {'--dropdown-border' : border},
+	            {'--dropdown-hover-background-color': hoverBackgroundColor},
+	            {'--dropdown-default-text-color': textColor}]">
 		<span class="text">{{(prefix ? prefix : "") + ' '}}{{placeholder}}</span>
 		<i class="fa fa-angle-down"></i>
 		<div v-if="isBottomSectionToggled"
@@ -27,14 +27,14 @@
 				isBottomSectionToggled: false,
 				optionsHeight: 0,
 				optionHeight: 35,
-				dropdownWidth: 100,
+				width: 100,
 				configOptions: [],
 				placeholder: "",
 				prefix: "",
-				dropdownBackgroundColor: "transparent",
-				dropdownHoverBackgroundColor: "#0084d4",
-				dropdownBorder: "1px solid transparent",
-				dropdownTextColor: "#fff",
+				backgroundColor: "transparent",
+				hoverBackgroundColor: "#0084d4",
+				border: "1px solid transparent",
+				textColor: "#fff",
 			}
 		},
 		components: {
@@ -53,22 +53,22 @@
 			},
 			setConfigData() {
 				this.configOptions = this.config.options;
-				this.dropdownWidth = this.config.width;
+				this.width = this.config.width;
 				this.placeholder = this.config.placeholder;
 				if (this.config.prefix) {
 					this.prefix = this.config.prefix;
 				}
 				if (this.config.backgroundColor) {
-					this.dropdownBackgroundColor = this.config.backgroundColor;
+					this.backgroundColor = this.config.backgroundColor;
 				}
-				if (this.config.dropdownBorder) {
-					this.dropdownBorder = this.config.dropdownBorder;
+				if (this.config.border) {
+					this.border = this.config.border;
 				}
-				if (this.config.dropdownHoverBackgroundColor) {
-					this.dropdownHoverBackgroundColor = this.config.dropdownHoverBackgroundColor;
+				if (this.config.hoverBackgroundColor) {
+					this.hoverBackgroundColor = this.config.hoverBackgroundColor;
 				}
-				if (this.config.dropdownTextColor) {
-					this.dropdownTextColor = this.config.dropdownTextColor;
+				if (this.config.textColor) {
+					this.textColor = this.config.textColor;
 				}
 			},
 			setOptionsHeight() {
