@@ -2,9 +2,13 @@
 	<div class="dropdown" @click="toggleRiskLevels"
 	     :style="[{'--options-height': optionsHeight + 'px'},
 	            {'--option-height': optionHeight + 'px'},
-	            {'--dropdown-width': dropdownWidth + 'px'}]">
+	            {'--dropdown-width': dropdownWidth + 'px'},
+	            {'--dropdown-background-color': dropdownBackgroundColor},
+	            {'--dropdown-border' : dropdownBorder},
+	            {'--dropdown-hover-background-color': dropdownHoverBackgroundColor},
+	            {'--dropdown-default-text-color': dropdownTextColor}]">
 		<span class="text">{{(prefix ? prefix : "") + ' '}}{{placeholder}}</span>
-		<i class="fa fa-caret-down"></i>
+		<i class="fa fa-angle-down"></i>
 		<div v-if="isBottomSectionToggled"
 		     class="options">
 			<div v-for="option in configOptions"
@@ -26,7 +30,11 @@
 				dropdownWidth: 100,
 				configOptions: [],
 				placeholder: "",
-				prefix: ""
+				prefix: "",
+				dropdownBackgroundColor: "transparent",
+				dropdownHoverBackgroundColor: "#0084d4",
+				dropdownBorder: "1px solid transparent",
+				dropdownTextColor: "#fff",
 			}
 		},
 		components: {
@@ -49,6 +57,18 @@
 				this.placeholder = this.config.placeholder;
 				if (this.config.prefix) {
 					this.prefix = this.config.prefix;
+				}
+				if (this.config.backgroundColor) {
+					this.dropdownBackgroundColor = this.config.backgroundColor;
+				}
+				if (this.config.dropdownBorder) {
+					this.dropdownBorder = this.config.dropdownBorder;
+				}
+				if (this.config.dropdownHoverBackgroundColor) {
+					this.dropdownHoverBackgroundColor = this.config.dropdownHoverBackgroundColor;
+				}
+				if (this.config.dropdownTextColor) {
+					this.dropdownTextColor = this.config.dropdownTextColor;
 				}
 			},
 			setOptionsHeight() {
