@@ -27,6 +27,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 
 ## Events
 | event name | return value | description | usage |
+| --- | ---  | --- | --- |
 | setSelectedOption | Clicked Option Object | Once a single dropdown option was clicked, it's option data object is emitted through this event upwards to the dropdown selector above | e.g ```<vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>``` |
 
 ## Install
