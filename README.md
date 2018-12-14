@@ -3,8 +3,31 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
-# Install via NPM
-To install the component simply use the command ```npm i vue-dynamic-dropdown```
+# Usage
+Install via NPM ```npm i vue-dynamic-dropdown```
+
+Then require in your project:
+```
+var VueDropdown = require('vue-dynamic-dropdown');
+```
+or ES6 syntax:
+```
+import VueDropdown from 'vue-dynamic-dropdown'
+```
+Then you can register the component globally:
+```
+Vue.component('vue-dropdown', VueDropdown);
+```
+Or in your Vue component:
+```
+components: {
+  VueDropdown
+}
+```
+You can then use the following selector anywhere in your project:
+```
+<vue-dropdown></vue-dropdown>
+```
 
 # Docs
 ```config: {...}``` is a configuration object holding the dropdown api properties which are:
