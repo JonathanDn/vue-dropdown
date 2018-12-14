@@ -3,7 +3,7 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
-# Usage
+# Docs
 ```config: {...}``` is a configuration object holding the dropdown api properties which are:
 
 ## Basics
@@ -34,5 +34,5 @@ Listening to the event:
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
 
-# Install
+# Install via NPM
 To install the component simply use the command ```npm i vue-dynamic-dropdown```
