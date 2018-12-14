@@ -33,14 +33,23 @@ Define your **config** options object e.g
 data: function() {
     return {
         config: {
-            options: [{...}, {...}, {...}],
+            options: [
+                {
+                    value: "option 1"
+                },
+                {
+                    value: "option "
+                },
+                {
+                    value: "option 3"
+                },
+            ],
             prefix: "The",
             backgroundColor: "green"
         }
     }
 }
 ```
-
 And bind it to the selector like so
 ```
 <vue-dropdown :config="config"></vue-dropdown>
