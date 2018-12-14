@@ -28,6 +28,39 @@ You can then use the following selector anywhere in your project:
 ```
 <vue-dropdown></vue-dropdown>
 ```
+
+# Docs
+```config: {...}``` is a configuration object that is to be binded to vue-dropdown, api properties are:
+
+## Basics
+
+| Property | Type  | Description |
+| --- | ---  | --- |
+| **options** | array | holds the inner selection options of the dropdown(shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
+| **width** | number | determines the width of the dropdown button & options drawer |
+| **placeholder** | string | The text shown on the dropdown button defaultly |
+| **prefix** | string | A text prefix that will be added before the placeholder text |
+
+## Customized Styling
+
+| Property | Type  | Description |
+| --- | ---  | --- |
+| **backgroundColor** | string | Set the dropdown button & options area background color |
+| **hoverBackgroundColor** | string | Set the dropdown button & options hover background color |
+| **border** | string | Set the dropdown button & options border |
+| **textColor** | string | Set the dropdown button & options text color |
+
+## Events
+| Event Name | Returns | Description |
+| --- | ---  | --- |
+| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so |
+
+Listening to the event e.g:
+```
+<vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
+```
+
+## Implemntation Example
 Define your **config** options object in the component importing VueDropdown e.g
 ```
 data: function() {
@@ -54,35 +87,4 @@ And bind it to the selector like so
 ```
 <vue-dropdown :config="config"></vue-dropdown>
 
-```
-
-# Docs
-```config: {...}``` is a configuration object holding the dropdown api properties which are:
-
-## Basics
-
-| property | Type  | Description |
-| --- | ---  | --- |
-| **options** | array | holds the inner selection options of the dropdown(shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
-| **width** | number | determines the width of the dropdown button & options drawer |
-| **placeholder** | string | The text shown on the dropdown button defaultly |
-| **prefix** | string | A text prefix that will be added before the placeholder text |
-
-## Customized Styling
-
-| property | Type  | Description |
-| --- | ---  | --- |
-| **backgroundColor** | string | Set the dropdown button & options area background color |
-| **hoverBackgroundColor** | string | Set the dropdown button & options hover background color |
-| **border** | string | Set the dropdown button & options border |
-| **textColor** | string | Set the dropdown button & options text color |
-
-## Events
-| event name | returns | description |
-| --- | ---  | --- |
-| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so |
-
-Listening to the event:
-```
-<vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
