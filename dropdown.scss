@@ -1,13 +1,8 @@
+@import '../../shared/common';
 // * * binded style variables * *
 // --options-height --> dynamic options menu height
 // --option-height --> dynamic single option item height
 // --dropdown-width --> dynamic dropdown & options drawer width
-
-$border-bg: #232b35;
-$background-bg: #4a5b70;	
-$default-border-radius: 4px;	
-$default-hover-color: #0084d4;
-$default-text-hover-color: #000;
 
 .dropdown {
 	display: flex;
@@ -17,11 +12,11 @@ $default-text-hover-color: #000;
 	height: var(--option-height);
 	padding: 0 5px;
 	position: relative;
-	border: 1px solid $border-bg;
+	border: 1px solid $card-border;
 	border-radius: 4px;
 	cursor: pointer;
-	color: #fff;
-	background: $background-bg;
+	color: var(--dropdown-default-text-color);
+	background: var(--dropdown-background-color);
 	user-select: none;
 	.text {}
 	i {
@@ -38,9 +33,9 @@ $default-text-hover-color: #000;
 		left: -1px;
 		bottom: 0;
 		z-index: 1;
-		background: $background-bg;
+		background: $btn-bg;
 		border-radius: $default-border-radius;
-		border: 1px solid $border-bg;
+		border: var(--dropdown-border);
 		.option {
 			display: flex;
 			align-items: center;
@@ -59,9 +54,9 @@ $default-text-hover-color: #000;
 	}
 }
 .dropdown:hover {
-	background: $default-hover-color;
+	background: var(--dropdown-hover-background-color);
 	transition: 0.7s all;
 	.text, i {
-		color: $default-text-hover-color;
+		color: var(--dropdown-default-text-color);
 	}
 }
