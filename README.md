@@ -10,7 +10,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 
 | property | Type  | Description |
 | --- | ---  | --- |
-| options | array | holds the inner selection options of the dropdown(shown when open) |
+| options | array | holds the inner selection options of the dropdown(shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
 | width | number | determines the width of the dropdown button & options drawer |
 | width | number | determines the width of the dropdown button & options drawer |
 | placeholder | string | The text shown on the dropdown button defaultly |
