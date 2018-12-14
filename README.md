@@ -3,6 +3,9 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
+# Install via NPM
+To install the component simply use the command ```npm i vue-dynamic-dropdown```
+
 # Docs
 ```config: {...}``` is a configuration object holding the dropdown api properties which are:
 
@@ -33,6 +36,3 @@ Listening to the event:
 ```
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
-
-# Install via NPM
-To install the component simply use the command ```npm i vue-dynamic-dropdown```
