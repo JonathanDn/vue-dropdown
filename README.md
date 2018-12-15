@@ -3,7 +3,7 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
-[![Play with the demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/zxo37xyrjx)
+[![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/100rj058m7)
 
 # Usage
 Install via NPM ```npm i vue-dynamic-dropdown```
