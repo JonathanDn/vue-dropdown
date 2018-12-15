@@ -14,7 +14,7 @@
 			<div v-for="option in configOptions"
 			     class="option"
 			     @click="setCurrentSelectedOption(option)">
-				{{option.value | firstLetterUpperCase}}
+				{{ option.value }}
 			</div>
 		</div>
 	</div>
