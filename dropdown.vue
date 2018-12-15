@@ -31,7 +31,7 @@
 				configOptions: [],
 				placeholder: "",
 				prefix: "",
-				backgroundColor: "transparent",
+				backgroundColor: "gray",
 				hoverBackgroundColor: "#0084d4",
 				border: "1px solid transparent",
 				textColor: "#fff",
