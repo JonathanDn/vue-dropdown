@@ -1,8 +1,15 @@
-@import '../../shared/common';
 // * * binded style variables * *
 // --options-height --> dynamic options menu height
 // --option-height --> dynamic single option item height
 // --dropdown-width --> dynamic dropdown & options drawer width
+
+// * * * Variables * * *
+$card-border: #232b35;
+$btn-bg: #4a5b70;
+$default-border-radius: 4px;
+$default-text-hover-color: black;
+$default-hover-color: #0084d4;
+
 
 .dropdown {
 	display: flex;
