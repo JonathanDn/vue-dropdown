@@ -1,6 +1,5 @@
 // * * * Variables * * *
 $card-border: #232b35;
-$btn-bg: #4a5b70;
 $default-border-radius: 4px;
 $default-text-hover-color: black;
 $default-hover-color: #0084d4;
@@ -35,7 +34,7 @@ $default-hover-color: #0084d4;
     left: -1px;
     bottom: 0;
     z-index: 1;
-    background: $btn-bg;
+    background: var(--dropdown-background-color);
     border-radius: $default-border-radius;
     border: var(--dropdown-border);
     .option {
