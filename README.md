@@ -3,6 +3,8 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
+[Play with the Demo]: https://codesandbox.io/s/zxo37xyrjx 
+
 # Usage
 Install via NPM ```npm i vue-dynamic-dropdown```
 
