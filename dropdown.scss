@@ -24,8 +24,18 @@ $default-hover-color: #0084d4;
   user-select: none;
   .text {
   }
-  i {
-    margin-left: 5px;
+  .angle-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid $default-text-color;
+    background: transparent;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    width: 1px;
+    height: 1px;
+    margin: -3px 5px 0 0;
+    transform: rotate(45deg);
   }
   .options {
     display: flex;
