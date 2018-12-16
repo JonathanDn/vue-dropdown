@@ -73,7 +73,7 @@ data: function() {
                     value: "option 1"
                 },
                 {
-                    value: "option "
+                    value: "option 2"
                 },
                 {
                     value: "option 3"
