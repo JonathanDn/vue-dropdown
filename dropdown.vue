@@ -16,7 +16,7 @@
     	{{ (config.prefix ? config.prefix : "") + " "}}
 	{{ config.placeholder ? config.placeholder : "" }}
     </span>
-    <i class="fa fa-angle-down"></i>
+    <i class="angle-down"></i>
     <div v-if="isBottomSectionToggled" class="options">
       <div
         v-for="option in configOptions"
