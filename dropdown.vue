@@ -30,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: "dropdown",
+  name: "vue-dropdown",
   data() {
     return {
       isBottomSectionToggled: false,
