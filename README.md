@@ -3,6 +3,9 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
+###### Demo
+![A dropdown demo gif](https://media.giphy.com/media/2dqOpioRxF4A3L5Q61/giphy.gif)
+
 [![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/100rj058m7)
 
 # Usage
