@@ -2,22 +2,31 @@
   <div
     class="dropdown"
     @click="toggleRiskLevels"
+    :class="{ expanded: isExpanded }"
     :style="[
       { '--options-height': optionsHeight + 'px' },
+      { '--options-height-neg': '-' + optionsHeight + 'px' },
       { '--option-height': optionHeight + 'px' },
+      { '--main-el-border-radius': borderRadius },
       { '--dropdown-width': width + 'px' },
       { '--dropdown-background-color': backgroundColor },
+      { '--dropdown-expanded-color': backgroundExpandedColor },
       { '--dropdown-border': border },
       { '--dropdown-hover-background-color': hoverBackgroundColor },
       { '--dropdown-default-text-color': textColor }
     ]"
   >
-    <span class="text">
-    	{{ (config.prefix ? config.prefix : "") + " "}}
-	{{ config.placeholder ? config.placeholder : "" }}
-    </span>
-    <i class="angle-down"></i>
-    <div v-if="isBottomSectionToggled" class="options">
+    <div class="dropdown-label-container">
+      <div class="dropdown-label">
+        <span class="text">
+          {{ (config.prefix ? config.prefix : "") + " "
+          }}{{ config.placeholder ? config.placeholder : "" }}
+        </span>
+        <i class="angle-down"></i>
+      </div>
+    </div>
+
+    <div v-expand="isExpanded" class="options expand">
       <div
         v-for="option in configOptions"
         class="option"
@@ -30,7 +39,7 @@
 </template>
 <script>
 export default {
-  name: "vue-dropdown",
+  name: "dropdown",
   data() {
     return {
       isBottomSectionToggled: false,
@@ -38,18 +47,50 @@ export default {
       optionHeight: 35,
       width: 100,
       configOptions: [],
-      backgroundColor: "gray",
+      backgroundColor: "#cde4f5",
+      backgroundExpandedColor: "#fff",
       hoverBackgroundColor: "#0084d4",
       border: "1px solid  #232b35",
-      textColor: "#fff"
+      borderRadius: 0,
+      textColor: "#fff",
+      isExpanded: false
     };
   },
   components: {},
   props: ["config"],
   computed: {},
+  directives: {
+    expand: {
+      inserted: function(el, binding) {
+        if (binding.value !== null) {
+          function calcHeight() {
+            const currentState = el.getAttribute("aria-expanded");
+            el.classList.add("u-no-transition");
+            el.removeAttribute("aria-expanded");
+            el.style.height = null;
+            el.style.height = el.clientHeight + "px";
+            el.setAttribute("aria-expanded", currentState);
+
+            setTimeout(function() {
+              el.classList.remove("u-no-transition");
+            });
+          }
+          el.classList.add("expand");
+          el.setAttribute("aria-expanded", binding.value ? "true" : "false");
+          calcHeight();
+          window.addEventListener("resize", calcHeight);
+        }
+      },
+      update: function(el, binding) {
+        if (el.style.height && binding.value !== null) {
+          el.setAttribute("aria-expanded", binding.value ? "true" : "false");
+        }
+      }
+    }
+  },
   methods: {
     toggleRiskLevels() {
-      this.isBottomSectionToggled = !this.isBottomSectionToggled;
+      this.isExpanded = !this.isExpanded;
     },
     setCurrentSelectedOption(option) {
       this.$emit("setSelectedOption", option);
@@ -61,6 +102,9 @@ export default {
       if (this.config.backgroundColor) {
         this.backgroundColor = this.config.backgroundColor;
       }
+      if (this.config.backgroundExpandedColor) {
+        this.backgroundExpandedColor = this.config.backgroundExpandedColor;
+      }
       if (this.config.border) {
         this.border = this.config.border;
       }
@@ -69,6 +113,9 @@ export default {
       }
       if (this.config.textColor) {
         this.textColor = this.config.textColor;
+      }
+      if (this.config.borderRadius) {
+        this.borderRadius = this.config.borderRadius;
       }
     },
     setOptionsHeight() {
