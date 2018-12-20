@@ -1,4 +1,4 @@
-# vue-dropdown
+# vue-dynamic-dropdown
 ## A Highly Customizable, easy-to-use elegant dropdown component
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
