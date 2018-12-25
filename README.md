@@ -4,7 +4,7 @@
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
 ###### Demo
-![A dropdown demo gif](https://media.giphy.com/media/25N3KycIwGcfGWBXz7/giphy.gif)
+![A dropdown demo gif](https://media.giphy.com/media/5QLuCj7YGvcAj49MGh/giphy.gif)
 
 [![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2pz4wpy38j)
 
