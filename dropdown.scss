@@ -1,7 +1,8 @@
 // * * * Variables * * *
 $default-text-hover-color: black;
-$default-hover-color: #0084d4;
+$default-hover-color: #cde4f5;
 $default-text-color: #fff;
+$option-padding: 4px 10px;
 
 .dropdown {
   display: flex;
@@ -10,7 +11,7 @@ $default-text-color: #fff;
   flex-direction: column;
   width: var(--dropdown-width);
   position: relative;
-  border: var(--dropdown-border);
+  border: 1px solid transparent;
   border-radius: var(--main-el-border-radius);
   cursor: pointer;
   color: var(--dropdown-default-text-color);
@@ -26,8 +27,10 @@ $default-text-color: #fff;
       flex: 1 1 auto;
       align-items: center;
       height: var(--option-height);
-      padding: 0 5px;
+      padding: $option-padding;
       .text {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 24px;
       }
       .angle-down {
         display: flex;
@@ -42,6 +45,12 @@ $default-text-color: #fff;
         margin: -3px 5px 0 0;
         border-color: var(--dropdown-default-text-color);
         transform: rotate(45deg);
+        transition: all 0.7s;
+      }
+      .toggled {
+        margin-bottom: -12px;
+        transform: rotate(-135deg);
+        transition: all 0.7s;
       }
     }
   }
@@ -51,8 +60,10 @@ $default-text-color: #fff;
     .option {
       display: flex;
       align-items: center;
-      padding: 0 5px;
+      padding: $option-padding;
       height: 35px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
     }
     .option:hover {
       color: $default-text-hover-color;
@@ -61,38 +72,39 @@ $default-text-color: #fff;
     }
     .option:last-child {
       border-radius: 0 0 var(--main-el-border-radius)
-        var(--main-el-border-radius);
+      var(--main-el-border-radius);
     }
     .option:last-child:hover {
       border-radius: 0 0 var(--main-el-border-radius)
-        var(--main-el-border-radius);
+      var(--main-el-border-radius);
     }
   }
 }
 .dropdown.expanded {
   background: var(--dropdown-expanded-color);
+  border: var(--dropdown-border);
   transition: all 0.7s linear;
 }
 
-// Expand Class
+// Expand Class - Most important part
 .expand {
   overflow: hidden;
   transition-property: height;
-  transition-duration: 0.4s;
+  transition-duration: 0.4s; // Durations can be changed without touching JS
   transition-timing-function: cubic-bezier(
-    0.175,
-    0.885,
-    0.32,
-    1.275
-  ); 
+                  0.175,
+                  0.885,
+                  0.32,
+                  1.275
+  ); // Timing functions also!
 
   &[aria-expanded="false"] {
     height: 0 !important;
     transition-timing-function: cubic-bezier(
-      0.6,
-      -0.28,
-      0.735,
-      0.045
+                    0.6,
+                    -0.28,
+                    0.735,
+                    0.045
     ); // Timing function can be different for each direction
   }
 }
