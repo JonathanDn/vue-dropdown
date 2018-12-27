@@ -30,6 +30,7 @@ components: {
 }
 ```
 You can then use the following selector anywhere in your project:
+* Recent Update - to get up and running quick the package now supports rendering just the selector with default values
 ```
 <vue-dropdown></vue-dropdown>
 ```
@@ -92,8 +93,4 @@ And bind it to the selector like so
 ```
 <vue-dropdown :config="config"></vue-dropdown>
 
-```
-* Recent Update - In order to just get up and running and see an example with default configuration the package now supports rendering just the selector like so
-```
-<vue-dropdown></vue-dropdown>
 ```
