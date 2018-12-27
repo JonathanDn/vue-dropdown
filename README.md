@@ -93,3 +93,7 @@ And bind it to the selector like so
 <vue-dropdown :config="config"></vue-dropdown>
 
 ```
+* Recent Update - In order to just get up and running and see an example with default configuration the package now supports rendering just the selector like so
+```
+<vue-dropdown></vue-dropdown>
+```
