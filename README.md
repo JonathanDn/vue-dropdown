@@ -30,7 +30,7 @@ components: {
 }
 ```
 You can then use the following selector anywhere in your project:
-- To get up and running quick the package now supports rendering just the selector with default values
+* To get up and running quick the package now supports rendering just the selector with default values
 ```
 <vue-dropdown></vue-dropdown>
 ```
