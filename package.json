@@ -1,0 +1,22 @@
+{
+  "name": "vue-dynamic-dropdown",
+  "version": "1.0.6",
+  "description": "A Highly Customizeable vue dropdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanDn/vue-dropdown.git"
+  },
+  "keywords": [
+    "vue", "vue.js", "frontend", "web", "dropdown", "dynamic", "customize"
+  ],
+  "author": "Jonathan Doron <yonidn7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonathanDn/vue-dropdown/issues"
+  },
+  "homepage": "https://github.com/JonathanDn/vue-dropdown#readme"
+}
