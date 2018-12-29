@@ -3,18 +3,7 @@
 		class="dropdown"
 		@click="toggleRiskLevels"
 		:class="{ expanded: isExpanded }"
-		:style="[
-      { '--options-height': optionsHeight + 'px' },
-      { '--options-height-neg': '-' + optionsHeight + 'px' },
-      { '--option-height': optionHeight + 'px' },
-      { '--main-el-border-radius': borderRadius },
-      { '--dropdown-width': width + 'px' },
-      { '--dropdown-background-color': backgroundColor },
-      { '--dropdown-expanded-color': backgroundExpandedColor },
-      { '--dropdown-border': border },
-      { '--dropdown-hover-background-color': hoverBackgroundColor },
-      { '--dropdown-default-text-color': textColor }
-    ]"
+		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
 			<div class="dropdown-label">
@@ -58,7 +47,22 @@
 		},
 		components: {},
 		props: ["config"],
-		computed: {},
+		computed: {
+			computedStyles: function() {
+				return [
+					{ '--options-height': this.optionsHeight + 'px' },
+					{ '--options-height-neg': '-' + this.optionsHeight + 'px' },
+					{ '--option-height': this.optionHeight + 'px' },
+					{ '--main-el-border-radius': this.borderRadius },
+					{ '--dropdown-width': this.width + 'px' },
+					{ '--dropdown-background-color': this.backgroundColor },
+					{ '--dropdown-expanded-color': this.backgroundExpandedColor },
+					{ '--dropdown-border': this.border },
+					{ '--dropdown-hover-background-color': this.hoverBackgroundColor },
+					{ '--dropdown-default-text-color': this.textColor }
+				];
+			}
+		},
 		directives: {
 			expand: {
 				inserted: function(el, binding) {
