@@ -1,8 +1,8 @@
 {
   "name": "vue-dynamic-dropdown",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Highly Customizeable vue dropdown",
-  "main": "index.js",
+  "main": "dropdown.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
