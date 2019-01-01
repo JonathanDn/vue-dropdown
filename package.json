@@ -1,6 +1,6 @@
 {
   "name": "vue-dynamic-dropdown",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A Highly Customizeable vue dropdown",
   "main": "dropdown.vue",
   "scripts": {
