@@ -138,5 +138,5 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "./vue-dropdown";
+	@import "./dropdown";
 </style>
