@@ -1,6 +1,6 @@
 {
   "name": "vue-dynamic-dropdown",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "A Highly Customizeable vue dropdown",
   "main": "dropdown.vue",
   "scripts": {
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/JonathanDn/vue-dropdown/issues"
   },
-  "homepage": "https://github.com/JonathanDn/vue-dropdown#readme"
+	"homepage": "https://github.com/JonathanDn/vue-dropdown#readme",
+	"dependencies": {
+		"node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+	}
 }
