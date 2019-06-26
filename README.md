@@ -12,26 +12,26 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 Install via NPM ```npm i vue-dynamic-dropdown```
 
 Then require in your project:
-```
+```js
 var VueDropdown = require('vue-dynamic-dropdown');
 ```
 or ES6 syntax:
-```
+```js
 import VueDropdown from 'vue-dynamic-dropdown'
 ```
 Then you can register the component globally:
-```
+```js
 Vue.component('vue-dropdown', VueDropdown);
 ```
 Or in your Vue component:
-```
+```js
 components: {
   VueDropdown
 }
 ```
 You can then use the following selector anywhere in your project:
 * To get up and running quick the package now supports rendering just the selector with default values
-```
+```html
 <vue-dropdown></vue-dropdown>
 ```
 
@@ -62,13 +62,13 @@ You can then use the following selector anywhere in your project:
 | **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so |
 
 Listening to the event e.g:
-```
+```html
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
 
 ## Implemntation Example
 Define your **config** options object in the component importing VueDropdown e.g
-```
+```js
 data: function() {
     return {
         config: {
@@ -90,7 +90,7 @@ data: function() {
 }
 ```
 And bind it to the selector like so
-```
+```html
 <vue-dropdown :config="config"></vue-dropdown>
 
 ```
