@@ -3,6 +3,9 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
+![MIT License](https://badgen.net/badge/license/MIT/blue "MIT License")
+[![view on npm](http://img.shields.io/npm/v/vue-dynamic-star-rating.svg?colorB=red)](https://www.npmjs.org/package/vue-dynamic-dropdown)
+
 ###### Demo
 ![A dropdown demo gif](https://media.giphy.com/media/5QLuCj7YGvcAj49MGh/giphy.gif)
 
