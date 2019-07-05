@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/JonathanDn/vue-dropdown/issues"
   },
-  "homepage": "https://github.com/JonathanDn/vue-dropdown#readme"
+	"homepage": "https://github.com/JonathanDn/vue-dropdown#readme",
+	"dependencies": {
+		"node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+	}
 }

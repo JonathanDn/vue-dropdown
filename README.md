@@ -1,5 +1,5 @@
 # vue-dynamic-dropdown
-## A Highly Customizable, easy-to-use elegant dropdown component
+## A Highly Customizable, easy-to-use, elegant, dropdown component
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
@@ -11,43 +11,49 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 
 [![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-dynamic-dropdown-component-dm7bf)
 
-# Usage
+# Usage:
+
+## First
 Install via NPM ```npm i vue-dynamic-dropdown```
 
-Then require in your project:
-```js
+## Second
+Require in your project:
+```
 var VueDropdown = require('vue-dynamic-dropdown');
 ```
 or ES6 syntax:
 ```js
 import VueDropdown from 'vue-dynamic-dropdown'
 ```
-Then you can register the component globally:
-```js
+
+# Third
+You can register the component globally:
+```
 Vue.component('vue-dropdown', VueDropdown);
 ```
-Or in your Vue component:
-```js
+Or locally in a single Vue component:
+```
 components: {
   VueDropdown
 }
 ```
-You can then use the following selector anywhere in your project:
-* To get up and running quick the package now supports rendering just the selector with default values
-```html
+
+Insert the following selector anywhere in your project (global) or in your existing component (local):
+**NOTE:** To get up and running quickly the package now supports rendering just the selector with default values.
+```
 <vue-dropdown></vue-dropdown>
 ```
 
-# Docs
-```config: {...}``` is a configuration object that is to be binded to vue-dropdown, api properties are:
+# Docs:
+```config: {...}``` is a configuration object that is to be bound to vue-dropdown, API properties are:
 
 ## Basics
 
 | Property | Type  | Description |
 | --- | ---  | --- |
-| **options** | array | holds the inner selection options of the dropdown(shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
-| **width** | number | determines the width of the dropdown button & options drawer |
-| **placeholder** | string | The text shown on the dropdown button defaultly |
+| **options** | array | h=Holds the inner selection options of the dropdown (shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
+| **width** | number | Determines the width of the dropdown button & options drawer |
+| **placeholder** | string | The text shown on the dropdown button by default |
 | **prefix** | string | A text prefix that will be added before the placeholder text |
 
 ## Customized Styling
@@ -62,14 +68,14 @@ You can then use the following selector anywhere in your project:
 ## Events
 | Event Name | Returns | Description |
 | --- | ---  | --- |
-| **setSelectedOption** | Option Obj | Clicking a dropdown option emits an option data object upwards like so |
+| **setSelectedOption** | Option Object | Clicking a dropdown option emits an option data object upwards |
 
 Listening to the event e.g:
 ```html
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
 
-## Implemntation Example
+## Implementation Example
 Define your **config** options object in the component importing VueDropdown e.g
 ```js
 data: function() {
