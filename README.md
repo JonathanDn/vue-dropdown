@@ -3,10 +3,13 @@
 
 Feedback would be much appreciated, questions, suggestions, issues are more than welcome.
 
+![MIT License](https://badgen.net/badge/license/MIT/blue "MIT License")
+[![view on npm](http://img.shields.io/npm/v/vue-dynamic-dropdown.svg?colorB=red)](https://www.npmjs.org/package/vue-dynamic-dropdown)
+
 ###### Demo
 ![A dropdown demo gif](https://media.giphy.com/media/5QLuCj7YGvcAj49MGh/giphy.gif)
 
-[![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2pz4wpy38j)
+[![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-dynamic-dropdown-component-dm7bf)
 
 # Usage:
 
@@ -19,7 +22,7 @@ Require in your project:
 var VueDropdown = require('vue-dynamic-dropdown');
 ```
 or ES6 syntax:
-```
+```js
 import VueDropdown from 'vue-dynamic-dropdown'
 ```
 
@@ -68,13 +71,13 @@ Insert the following selector anywhere in your project (global) or in your exist
 | **setSelectedOption** | Option Object | Clicking a dropdown option emits an option data object upwards |
 
 Listening to the event e.g:
-```
+```html
 <vue-dropdown @setSelectedOption="myLocalSetterFunction($event)"></vue-dropdown>
 ```
 
 ## Implementation Example
 Define your **config** options object in the component importing VueDropdown e.g
-```
+```js
 data: function() {
     return {
         config: {
@@ -96,7 +99,7 @@ data: function() {
 }
 ```
 And bind it to the selector like so
-```
+```html
 <vue-dropdown :config="config"></vue-dropdown>
 
 ```
