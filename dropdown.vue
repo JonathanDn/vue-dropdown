@@ -20,7 +20,8 @@
 				v-for="option in configOptions"
 				class="option"
 				@click="setCurrentSelectedOption(option);"
-			>{{ option.value }}</div>
+			>{{ option.value }}
+			</div>
 		</div>
 	</div>
 </template>
@@ -57,24 +58,24 @@
 		components: {},
 		props: ["config"],
 		computed: {
-			computedStyles: function() {
+			computedStyles: function () {
 				return [
-					{ "--options-height": this.optionsHeight + "px" },
-					{ "--options-height-neg": "-" + this.optionsHeight + "px" },
-					{ "--option-height": this.optionHeight + "px" },
-					{ "--main-el-border-radius": this.borderRadius },
-					{ "--dropdown-width": this.width + "px" },
-					{ "--dropdown-background-color": this.backgroundColor },
-					{ "--dropdown-expanded-color": this.backgroundExpandedColor },
-					{ "--dropdown-border": this.border },
-					{ "--dropdown-hover-background-color": this.hoverBackgroundColor },
-					{ "--dropdown-default-text-color": this.textColor }
+					{"--options-height": this.optionsHeight + "px"},
+					{"--options-height-neg": "-" + this.optionsHeight + "px"},
+					{"--option-height": this.optionHeight + "px"},
+					{"--main-el-border-radius": this.borderRadius},
+					{"--dropdown-width": this.width + "px"},
+					{"--dropdown-background-color": this.backgroundColor},
+					{"--dropdown-expanded-color": this.backgroundExpandedColor},
+					{"--dropdown-border": this.border},
+					{"--dropdown-hover-background-color": this.hoverBackgroundColor},
+					{"--dropdown-default-text-color": this.textColor}
 				];
 			}
 		},
 		directives: {
 			expand: {
-				inserted: function(el, binding) {
+				inserted: function (el, binding) {
 					if (binding.value !== null) {
 						function calcHeight() {
 							const currentState = el.getAttribute("aria-expanded");
@@ -84,17 +85,18 @@
 							el.style.height = el.clientHeight + "px";
 							el.setAttribute("aria-expanded", currentState);
 
-							setTimeout(function() {
+							setTimeout(function () {
 								el.classList.remove("u-no-transition");
 							});
 						}
+
 						el.classList.add("expand");
 						el.setAttribute("aria-expanded", binding.value ? "true" : "false");
 						calcHeight();
 						window.addEventListener("resize", calcHeight);
 					}
 				},
-				update: function(el, binding) {
+				update: function (el, binding) {
 					if (el.style.height && binding.value !== null) {
 						el.setAttribute("aria-expanded", binding.value ? "true" : "false");
 					}
@@ -144,7 +146,8 @@
 		beforeUdate() {
 			// this.setOptionsHeight();
 		},
-		mounted() {}
+		mounted() {
+		}
 	};
 </script>
 
