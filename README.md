@@ -51,7 +51,7 @@ Insert the following selector anywhere in your project (global) or in your exist
 
 | Property | Type  | Description |
 | --- | ---  | --- |
-| **options** | array | h=Holds the inner selection options of the dropdown (shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
+| **options** | array | Holds the inner selection options of the dropdown (shown when open), each single option is an object that has the ```value``` key that pairs with the given value e.g ```{ value: '1st Option' }``` |
 | **width** | number | Determines the width of the dropdown button & options drawer |
 | **placeholder** | string | The text shown on the dropdown button by default |
 | **prefix** | string | A text prefix that will be added before the placeholder text |
