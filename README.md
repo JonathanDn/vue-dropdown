@@ -9,7 +9,7 @@ Feedback would be much appreciated, questions, suggestions, issues are more than
 ###### Demo
 ![A dropdown demo gif](https://media.giphy.com/media/5QLuCj7YGvcAj49MGh/giphy.gif)
 
-[![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/2pz4wpy38j)
+[![Edit Vue Dynamic Dropdown Component](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/vue-dynamic-dropdown-component-dm7bf)
 
 # Usage
 Install via NPM ```npm i vue-dynamic-dropdown```
