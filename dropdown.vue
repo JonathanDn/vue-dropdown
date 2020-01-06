@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="dropdown"
-		@click="toggleDropdownOptions"
+		@click.stop="toggleDropdownOptions"
 		:class="{ expanded: isExpanded }"* 
 		:style="computedStyles"
 	>
