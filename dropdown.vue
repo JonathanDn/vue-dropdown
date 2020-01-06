@@ -1,8 +1,8 @@
 <template>
 	<div
 		class="dropdown"
-		@click="toggleRiskLevels"
-		:class="{ expanded: isExpanded }"
+		@click="toggleDropdownOptions"
+		:class="{ expanded: isExpanded }"* 
 		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
@@ -104,7 +104,7 @@
 			}
 		},
 		methods: {
-			toggleRiskLevels() {
+			toggleDropdownOptions() {
 				this.isExpanded = !this.isExpanded;
 			},
 			setCurrentSelectedOption(option) {
