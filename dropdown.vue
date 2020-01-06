@@ -137,16 +137,23 @@
 			},
 			setOptionsHeight() {
 				this.optionsHeight = this.optionHeight * this.configOptions.length;
+			},
+			documentClicked() {
+				if (this.isExpanded) {
+					this.isExpanded = false
+				}
 			}
 		},
 		created() {
+			document.addEventListener('click', this.documentClicked);
 			this.setConfigData();
 			this.setOptionsHeight();
 		},
 		beforeUdate() {
 			// this.setOptionsHeight();
 		},
-		mounted() {
+		destroyed() {
+			document.removeEventListener('click', this.documentClicked);
 		}
 	};
 </script>
