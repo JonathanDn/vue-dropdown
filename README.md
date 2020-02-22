@@ -55,6 +55,7 @@ Insert the following selector anywhere in your project (global) or in your exist
 | **width** | number | Determines the width of the dropdown button & options drawer |
 | **placeholder** | string | The text shown on the dropdown button by default |
 | **prefix** | string | A text prefix that will be added before the placeholder text |
+| **disabled** | boolean | Set true if the dropdown should be disabled |
 
 ## Customized Styling
 
@@ -64,6 +65,8 @@ Insert the following selector anywhere in your project (global) or in your exist
 | **hoverBackgroundColor** | string | Set the dropdown button & options hover background color |
 | **border** | string | Set the dropdown button & options border |
 | **textColor** | string | Set the dropdown button & options text color |
+| **disabledBackgroundColor** | string | Set the disabled dropdown button background color |
+| **disabledTextColor** | string | Set the disabled dropdown button text color |
 
 ## Events
 | Event Name | Returns | Description |
@@ -93,7 +96,8 @@ data: function() {
                 },
             ],
             prefix: "The",
-            backgroundColor: "green"
+            backgroundColor: "green", 
+            disabled: false,
         }
     }
 }

@@ -48,6 +48,7 @@
 				backgroundExpandedColor: "#fff",
 				hoverBackgroundColor: "#0084d4",
 				disabledBackgroundColor: "#ccc",
+				disabledTextColor: "#555",
 				isExpanded: false,
 				placeholder: "Placeholder",
 				textColor: "black",
@@ -70,7 +71,7 @@
 					{"--dropdown-expanded-color": this.backgroundExpandedColor},
 					{"--dropdown-border": this.border},
 					{"--dropdown-hover-background-color": this.hoverBackgroundColor},
-					{"--dropdown-default-text-color": this.textColor}
+					{"--dropdown-default-text-color":  this.config.disabled ? this.disabledTextColor : this.textColor}
 				];
 			}
 		},
