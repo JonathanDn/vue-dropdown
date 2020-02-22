@@ -2,6 +2,7 @@
 $default-text-hover-color: black;
 $default-hover-color: #cde4f5;
 $default-text-color: #fff;
+$disabled-text-color: #555;
 $option-padding: 4px 10px;
 
 .dropdown {
@@ -78,6 +79,11 @@ $option-padding: 4px 10px;
       border-radius: 0 0 var(--main-el-border-radius)
       var(--main-el-border-radius);
     }
+  }
+
+  &.disabled {
+    color: $disabled-text-color;
+    cursor: not-allowed;
   }
 }
 .dropdown.expanded {

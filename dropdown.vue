@@ -1,8 +1,8 @@
 <template>
 	<div
 		class="dropdown"
-		@click.stop="toggleDropdownOptions"
-		:class="{ expanded: isExpanded }"* 
+		@click.stop="checkDropdownHandler"
+		:class="{ expanded: isExpanded, disabled: config.disabled }"
 		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
@@ -47,6 +47,7 @@
 				backgroundColor: "#cde4f5",
 				backgroundExpandedColor: "#fff",
 				hoverBackgroundColor: "#0084d4",
+				disabledBackgroundColor: "#ccc",
 				isExpanded: false,
 				placeholder: "Placeholder",
 				textColor: "black",
@@ -65,7 +66,7 @@
 					{"--option-height": this.optionHeight + "px"},
 					{"--main-el-border-radius": this.borderRadius},
 					{"--dropdown-width": this.width + "px"},
-					{"--dropdown-background-color": this.backgroundColor},
+					{"--dropdown-background-color": this.config.disabled ? this.disabledBackgroundColor : this.backgroundColor},
 					{"--dropdown-expanded-color": this.backgroundExpandedColor},
 					{"--dropdown-border": this.border},
 					{"--dropdown-hover-background-color": this.hoverBackgroundColor},
@@ -142,7 +143,12 @@
 				if (this.isExpanded) {
 					this.isExpanded = false
 				}
-			}
+			}, 
+			checkDropdownHandler() {
+				if (!this.config.disabled) {
+					this.toggleDropdownOptions()
+				} 
+			},
 		},
 		created() {
 			document.addEventListener('click', this.documentClicked);
