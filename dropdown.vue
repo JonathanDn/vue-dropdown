@@ -2,7 +2,7 @@
 	<div
 		class="dropdown"
 		@click.stop="toggleDropdownOptions"
-		:class="{ expanded: isExpanded }"* 
+		:class="{ expanded: isExpanded }"
 		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
