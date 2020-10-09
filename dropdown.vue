@@ -1,7 +1,7 @@
 <template>
 	<div
 		class="dropdown"
-		@click.stop="checkDropdownHandler"
+		@click.stop="shouldToggleDropdown"
 		:class="computedClasses"
 		:style="computedStyles"
 	>
@@ -114,9 +114,6 @@
 			}
 		},
 		methods: {
-			toggleDropdownOptions() {
-				this.isExpanded = !this.isExpanded;
-			},
 			setCurrentSelectedOption(option) {
 				this.$emit("setSelectedOption", option);
 			},
@@ -153,9 +150,9 @@
 					this.isExpanded = false
 				}
 			}, 
-			checkDropdownHandler() {
+			shouldToggleDropdown() {
 				if (!this.config.disabled) {
-					this.toggleDropdownOptions()
+					this.isExpanded = !this.isExpanded;
 				} 
 			},
 		},
