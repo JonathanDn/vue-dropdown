@@ -2,25 +2,27 @@
 	<div
 		class="dropdown"
 		@click.stop="checkDropdownHandler"
-		:class="{ expanded: isExpanded, disabled: config.disabled }"
+		:class="computedClasses"
 		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
 			<div class="dropdown-label">
-        <span class="text">
-          {{ (config && config.prefix ? config.prefix : "") + " "
-          }}{{ config && config.placeholder ? config.placeholder : placeholder }}
-        </span>
+				<span class="text">
+					{{ (config && config.prefix ? config.prefix : "") + " "
+					}}{{ config && config.placeholder ? config.placeholder : placeholder }}
+				</span>
 				<i class="angle-down" :class="{ toggled: isExpanded }"></i>
 			</div>
 		</div>
 
 		<div v-expand="isExpanded" class="options expand">
 			<div
-				v-for="option in configOptions"
+				v-for="(i, option) in configOptions"
+				:key="'option-' + i"
 				class="option"
 				@click="setCurrentSelectedOption(option);"
-			>{{ option.value }}
+			>
+				{{ option.value }}
 			</div>
 		</div>
 	</div>
@@ -73,6 +75,12 @@
 					{"--dropdown-hover-background-color": this.hoverBackgroundColor},
 					{"--dropdown-default-text-color":  this.config.disabled ? this.disabledTextColor : this.textColor}
 				];
+			},
+			computedClasses: function() {
+				return { 
+					'expanded': this.isExpanded, 
+					'disabled': this.config.disabled 
+				}
 			}
 		},
 		directives: {
