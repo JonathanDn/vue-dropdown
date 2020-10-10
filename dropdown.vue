@@ -1,26 +1,28 @@
 <template>
 	<div
 		class="dropdown"
-		@click.stop="toggleDropdownOptions"
-		:class="{ expanded: isExpanded }"
+		@click.stop="shouldToggleDropdown"
+		:class="computedClasses"
 		:style="computedStyles"
 	>
 		<div class="dropdown-label-container">
 			<div class="dropdown-label">
-        <span class="text">
-          {{ (config && config.prefix ? config.prefix : "") + " "
-          }}{{ config && config.placeholder ? config.placeholder : placeholder }}
-        </span>
+				<span class="text">
+					{{ (config && config.prefix ? config.prefix : "") + " "
+					}}{{ config && config.placeholder ? config.placeholder : placeholder }}
+				</span>
 				<i class="angle-down" :class="{ toggled: isExpanded }"></i>
 			</div>
 		</div>
 
 		<div v-expand="isExpanded" class="options expand">
 			<div
-				v-for="option in configOptions"
+				v-for="(i, option) in configOptions"
+				:key="'option-' + i"
 				class="option"
 				@click="setCurrentSelectedOption(option);"
-			>{{ option.value }}
+			>
+				{{ option.value }}
 			</div>
 		</div>
 	</div>
@@ -47,6 +49,8 @@
 				backgroundColor: "#cde4f5",
 				backgroundExpandedColor: "#fff",
 				hoverBackgroundColor: "#0084d4",
+				disabledBackgroundColor: "#ccc",
+				disabledTextColor: "#555",
 				isExpanded: false,
 				placeholder: "Placeholder",
 				textColor: "black",
@@ -65,12 +69,18 @@
 					{"--option-height": this.optionHeight + "px"},
 					{"--main-el-border-radius": this.borderRadius},
 					{"--dropdown-width": this.width + "px"},
-					{"--dropdown-background-color": this.backgroundColor},
+					{"--dropdown-background-color": this.config.disabled ? this.disabledBackgroundColor : this.backgroundColor},
 					{"--dropdown-expanded-color": this.backgroundExpandedColor},
 					{"--dropdown-border": this.border},
 					{"--dropdown-hover-background-color": this.hoverBackgroundColor},
-					{"--dropdown-default-text-color": this.textColor}
+					{"--dropdown-default-text-color":  this.config.disabled ? this.disabledTextColor : this.textColor}
 				];
+			},
+			computedClasses: function() {
+				return { 
+					'expanded': this.isExpanded, 
+					'disabled': this.config.disabled 
+				}
 			}
 		},
 		directives: {
@@ -104,9 +114,6 @@
 			}
 		},
 		methods: {
-			toggleDropdownOptions() {
-				this.isExpanded = !this.isExpanded;
-			},
 			setCurrentSelectedOption(option) {
 				this.$emit("setSelectedOption", option);
 			},
@@ -142,7 +149,12 @@
 				if (this.isExpanded) {
 					this.isExpanded = false
 				}
-			}
+			}, 
+			shouldToggleDropdown() {
+				if (!this.config.disabled) {
+					this.isExpanded = !this.isExpanded;
+				} 
+			},
 		},
 		created() {
 			document.addEventListener('click', this.documentClicked);

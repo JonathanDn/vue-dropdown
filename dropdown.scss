@@ -79,6 +79,10 @@ $option-padding: 4px 10px;
       var(--main-el-border-radius);
     }
   }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
 }
 .dropdown.expanded {
   background: var(--dropdown-expanded-color);
