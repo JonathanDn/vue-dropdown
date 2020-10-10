@@ -23,6 +23,7 @@
   },
 	"homepage": "https://github.com/JonathanDn/vue-dropdown#readme",
 	"dependencies": {
+    "css-loader": "^3.4.2",
 		"node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
